@@ -28,7 +28,7 @@ class Persona
     #[Groups(['persona'])]
     private ?int $celular = null;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(inversedBy:'empleados')]
     #[Groups(['empleo'])]
     private ?Empleado $empleo = null;
 
